@@ -1,0 +1,23 @@
+.costboard {
+  display: flex;
+  min-width: 200px;
+  width: 20%;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  color: white;
+}
+.costboard-title {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 10px;
+}
+.costboard-amount {
+  font-size: 1.5rem;
+  padding: 10px;
+}
