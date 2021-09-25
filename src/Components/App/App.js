@@ -47,7 +47,7 @@ function App() {
         <section>
           <CostForm costFormHandler={costFormHandler}></CostForm>
         </section>
-        <section>
+        <section className="search-field">
           <SearchBox></SearchBox>
         </section>
         <section>
