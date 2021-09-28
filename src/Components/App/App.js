@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Container, Row } from 'react-bootstrap';
 import CostBoard from '../CostBoard/CostBoard';
 import CostCard from '../CostCard/CostCard';
 import CostForm from '../CostForm/CostForm';
@@ -33,17 +34,17 @@ function App() {
     e.preventDefault();
   }
   return (
-    <div className="App">
+    <Container>
       <header>
         <Title></Title>
       </header>
       <main>
-        <section className="dashboard">
+        <Row>
           <CostBoard id="today" title="Today" amount={todaysCost} background="#E4B457"></CostBoard>
           <CostBoard id="this-month" title="This Month" amount={thisMonthsCost} background="#A657E4"></CostBoard>
           <CostBoard id="this-year" title="This year" amount={thisYearsCost} background="#45D6A1"></CostBoard>
           <CostBoard id="all-time" title="All Time" amount={allTimesCost} background="#D65645"></CostBoard>
-        </section>
+        </Row>
         <section>
           <CostForm costFormHandler={costFormHandler}></CostForm>
         </section>
@@ -56,7 +57,7 @@ function App() {
           }
         </section>
       </main>
-    </div>
+    </Container>
   );
 }
 

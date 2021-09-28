@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './SearchBox.css';
+import { Form } from 'react-bootstrap';
 
 const SearchBox = () => {
     let [searchText, setsearchText] = useState("");
@@ -9,7 +9,7 @@ const SearchBox = () => {
         }
     }
     return (
-        <input className="search-box" maxLength="20" type="text" name="searchText" placeholder="Search Something" value={searchText} onChange={e => setsearchText(e.target.value)} onKeyUp={(e) => { searchSomething(e, searchText) }} />
+        <Form.Control className="my-2 p-2" required maxLength="20" type="text" placeholder="Search Something" value={searchText} onChange={e => setsearchText(e.target.value)} onKeyUp={(e) => { searchSomething(e, searchText) }} />
     );
 };
 
